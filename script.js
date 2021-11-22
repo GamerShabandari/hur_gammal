@@ -1,16 +1,25 @@
 
+let myBtn = document.getElementById("myBtn")
 
-// ta in användarens input ålder
+myBtn.addEventListener ("click" , function(){
 
-let minAlder = document.getElementById("minAlder");
+    console.log("klick")
+    let minAlder = document.getElementById("minAlder").value;
 
+    var rattAlder = parseInt(minAlder, 10);
 
+    console.log(rattAlder);
 
-// skapa knapp som vid klick kollar rätt ålder
+    if(rattAlder < 18){
 
+        alert("du är för ung!");
 
-//om ålder är 18 och upp tillräckligt gammal
-
-
-// om ålder är under 18 för ung
+    }else if(rattAlder >= 18 && rattAlder < 65){
+  
+            alert("välkommen in!");
+    } else{
+ 
+        alert("du är för gammal!");
+    }
+});
 
